@@ -8,4 +8,11 @@
 6. OpenCode
 7. Pandoc
 8. OmniRoute
-   
+9. Design Thinking 
+10. Scrum
+11. 2TUP
+12. Git
+13. Github Issues
+14. MCP
+15. UX Design
+16. Figma
