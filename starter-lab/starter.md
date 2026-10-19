@@ -107,8 +107,6 @@ style: |
 
 <div class="by">
 
-**Presented by :**
-Omar Mouttalie
 
 </div>
 
