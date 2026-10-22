@@ -1,196 +1,255 @@
 ---
 marp: true
 theme: default
-paginate: false
 size: 16:9
+paginate: true
 style: |
-  @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
   section {
-    background: #70020f;
-    color: #ffe0e3;
-    font-family: 'Arial', 'Helvetica', sans-serif;
-    font-size: 26px;
-    padding: 50px 60px;
-    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Segoe UI', Arial, sans-serif;
+    font-size: 25px;
+    background: #ffffff;
+    color: #12363a;
+    padding: 50px 70px;
     justify-content: flex-start;
   }
-  h1, h2 {
-    font-family: 'Anton', 'Impact', 'Arial Narrow', sans-serif;
-    font-weight: 400;
-    color: #ffe0e3;
-    line-height: 0.95;
-    letter-spacing: -1px;
-    margin: 0 0 30px 0;
+  section::after {
+    background: #38a3a5;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 20px;
+    padding: 2px 14px;
+    right: 34px;
+    bottom: 24px;
   }
-  h1 { font-size: 110px; }
-  h2 { font-size: 84px; }
-  h3 {
-    font-size: 28px;
+  h1 {
+    margin: -50px -70px 30px -70px;
+    padding: 30px 70px 22px 70px;
+    background: #38a3a5;
+    color: #ffffff;
+    font-size: 44px;
+    border-bottom: 10px solid #57cc99;
+  }
+  strong { color: #2a8486; }
+  a { color: #2a8486; }
+  ol, ul {
+    padding: 0;
     margin: 0;
-    color: #e6d9dc;
+    list-style-position: inside;
   }
-  p { margin: 0 0 6px 0; }
-
-  /* Light variant (pink background, dark red text) */
-  section.light { background: #ffdde0; color: #70020f; }
-  section.light h1, section.light h2 { color: #70020f; }
-  section.light p, section.light li {
-    font-family: 'Anton', 'Impact', 'Arial Narrow', sans-serif;
-    font-size: 30px;
-    line-height: 1.35;
-    color: #111;
+  li {
+    background: #e6f7ef;
+    border-left: 8px solid #57cc99;
+    border-radius: 0 8px 8px 0;
+    padding: 7px 16px;
+    margin-bottom: 10px;
   }
-
-  /* Title slide */
-  section.title { justify-content: space-between; }
-  section.title h1 { font-size: 150px; margin-top: 0; }
-  section.title::before {
-    content: "DEVEL\A OPER";
-    white-space: pre;
-    position: absolute;
-    right: -60px;
-    top: 230px;
-    font-family: 'Anton', 'Impact', sans-serif;
-    font-size: 300px;
-    line-height: 0.95;
-    color: #5f0010;
-    z-index: 0;
+  li::marker { color: #38a3a5; font-weight: bold; }
+  code {
+    background: #d4f1e3;
+    color: #0f4547;
+    border-radius: 4px;
+    padding: 1px 6px;
   }
-  section.title h1, section.title .by { position: relative; z-index: 1; }
-  .by { font-size: 20px; text-transform: none; }
-  .by strong {
-    font-family: 'Anton', 'Impact', sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-size: 24px;
-    display: block;
+  pre {
+    background: #0f3d3e;
+    border-radius: 10px;
+    border-top: 6px solid #57cc99;
+    margin: 14px 0;
   }
-
-  /* Two-column layout */
-  .cols {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    text-align: center;
-    margin-top: 60px;
+  pre code { background: none; color: #d4f1e3; }
+  table {
+    font-size: 22px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
   }
-  .cols .col {
-    font-family: 'Anton', 'Impact', sans-serif;
-    font-size: 34px;
-    line-height: 1.25;
+  th {
+    background: #57cc99;
+    color: #0b2a2c;
+    text-align: left;
+    padding: 10px 16px;
   }
-
-  /* Extension lists */
-  ul.ext { list-style: none; padding: 0; margin: 10px 0 0 0; }
-  ul.ext li { margin-bottom: 22px; font-size: 22px; line-height: 1.3; }
-  ul.ext li strong {
-    display: block;
-    font-size: 30px;
-    color: #e6d9dc;
-    margin-bottom: 2px;
+  td {
+    background: #e6f7ef;
+    padding: 10px 16px;
+    border-bottom: 3px solid #38a3a5;
   }
-
-  /* Bullet lists on dark slides */
-  section:not(.light) ul:not(.ext) {
-    font-family: 'Anton', 'Impact', sans-serif;
-    font-size: 30px;
-    line-height: 1.35;
+  blockquote {
+    background: #38a3a5;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 4px 22px;
+    margin: 20px 0 0 0;
   }
-  .hl { color: #4a6fe3; }
-  section.light strong { color: #70020f; }
+  blockquote strong, blockquote code { color: #ffffff; }
+  pre code, pre code span { color: #d4f1e3 !important; }
+  section.compact { font-size: 22px; }
+  section.compact h1 { margin-bottom: 20px; }
+  section.compact p { margin: 0 0 10px 0; line-height: 1.4; }
+  section.compact li { padding: 4px 16px; margin-bottom: 6px; }
+  section.compact pre { margin: 8px 0; padding: 0; font-size: 18px; }
+  section.compact pre code { padding: 8px 18px; }
+  section.lead {
+    background:
+      radial-gradient(circle at 88% 18%, #57cc99 0 150px, transparent 151px),
+      radial-gradient(circle at 96% 88%, #38a3a5 0 230px, transparent 231px),
+      #0f3d3e;
+    color: #d4f1e3;
+    justify-content: center;
+    padding-left: 90px;
+  }
+  section.lead::after { display: none; }
+  section.lead h1 {
+    margin: 0 0 18px 0;
+    padding: 0 0 0 24px;
+    background: none;
+    border-bottom: none;
+    border-left: 12px solid #57cc99;
+    color: #ffffff;
+    font-size: 84px;
+  }
+  section.lead strong { color: #57cc99; }
+  section.divider {
+    background: #57cc99;
+    color: #0b2a2c;
+    justify-content: center;
+  }
+  section.divider h1 {
+    margin: 0 0 24px 0;
+    padding: 0;
+    background: none;
+    border-bottom: 8px solid #0b2a2c;
+    color: #0b2a2c;
+    font-size: 56px;
+    display: inline-block;
+    align-self: flex-start;
+  }
+  section.divider li {
+    background: #38a3a5;
+    color: #ffffff;
+    border-left-color: #0b2a2c;
+  }
+  section.divider li::marker { color: #ffffff; }
+  section.divider strong, section.divider code { color: #ffffff; }
+  section.divider code { background: rgba(255, 255, 255, 0.2); }
 ---
 
-<!-- _class: title -->
+<!-- _class: lead -->
 
-# Developer<br>Starter<br>Pack
+# Lab Starter
 
-<div class="by">
+**Setting up your development environment**
 
-
-</div>
-
----
-
-## 1. Code Editor / IDE
-
-<div class="cols">
-<div class="col">
-
-<!-- Add VS Code logo: ![w:200](vscode.png) -->
-Visual Studio Code<br>
-1 - Free<br>
-2 - Beginner-friendly
-
-</div>
-<div class="col">
-
-<!-- Add JetBrains logo: ![w:200](jetbrains.png) -->
-JetBrains IDEs<br>
-(PyCharm, IntelliJ, PhpStorm)
-
-</div>
-</div>
-
----
-
-## Best VS Code<br>Extensions
-
-<ul class="ext">
-<li><strong>Live Server</strong>Launches a local development server with a live reload feature</li>
-<li><strong>Prettier</strong>A code formatter. It automatically cleans up, indents, and structures your code</li>
-<li><strong>GitLens</strong>Visualizes code authorship directly inside your files</li>
-<li><strong>Todo Tree</strong>Scans your workspace for comment tags like <b>TODO</b> or <b>FIXME</b> and organizes them into a clear tree view so you never forget unfinished tasks</li>
-<li><strong>Error Lens</strong>Radically changes how you see mistakes in your code by bringing errors directly to your line of sight rather than hiding them at the bottom of the screen</li>
-</ul>
+Git · Windows · VS Code
 
 ---
 
-<ul class="ext">
-<li><strong>Auto Rename Tag</strong>It auto renames the other tag whether it is a closing or opening tag</li>
-<li><strong>Auto-Open Markdown Preview</strong>Automatically opens the preview of a Markdown file</li>
-<li><strong>Code Runner</strong>Lets you run multiple programming languages in the console by clicking a play button</li>
-<li><strong>GitHub Copilot</strong>An AI assistant integrated right in the IDE. It can solve problems or refactor and debug code</li>
-</ul>
+# Agenda
+
+1. The problems we ran into
+2. The solutions
+3. Step-by-step guides for each fix
 
 ---
 
-## Version<br>Control
+# 1. The Problems
 
-- <span class="hl">Git</span>, the essential tool
-- <span class="hl">GitHub account</span> (also works as your portfolio). GitLab is an alternative.
-- <span class="hl">GitHub Desktop</span> or the GitLens extension if the command line feels heavy at first
-
-<!-- Add logos: ![w:120](git.png) ![w:100](github.png) -->
-
----
-
-<!-- _class: light -->
-
-## Browsers and<br>Dev Tools
-
-Chrome or Firefox with DevTools (Elements, Console, Network, Application tabs)
-Handy extensions: React DevTools (if you use React later), JSON Viewer, Lighthouse
+- **Git:** the project is not initialized, so changes are not tracked.
+- **Hidden files:** `.gitignore` and `.env` do not show up in the file explorer.
+- **Hidden extensions:** `README.md` is displayed as just `README`.
+- **TODOs:** pending tasks are scattered across the code.
+- **Web preview:** HTML pages have to be opened and refreshed by hand.
 
 ---
 
-<!-- _class: light -->
+# 2. The Solutions
 
-## Runtimes and<br>Languages
-
-Install only what you need:
-Node.js (LTS), which includes npm
-Python 3
-PHP, if you're doing PHP work
-Java JDK, if you're going the Java or Android route
+| Problem | Solution |
+|---|---|
+| Initialize Git | VS Code Source Control or `git init` |
+| See hidden files | Windows Explorer: **Hidden items** |
+| See `.md`, `.js`, `.php`… | Windows Explorer: **File name extensions** |
+| Find TODOs in the code | **[Better Todo Tree](https://marketplace.visualstudio.com/items?itemName=FanaticPythoner.better-todo-tree)** extension |
+| Live HTML preview | **[Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)** extension |
 
 ---
 
-## Local Server and<br>Database
+<!-- _class: divider -->
 
-- XAMPP or Laragon gives you Apache, PHP, and MySQL in one install (great for PHP/MySQL projects)
-- phpMyAdmin (comes with XAMPP) or DBeaver to manage databases
-- MySQL Workbench for visual schema design
-- SQLite for quick, lightweight projects
+# 3. Step-by-Step Guides
 
-<!-- Add logos: ![w:120](mysql.png) ![w:120](xampp.png) -->
+Five short walkthroughs, one per fix:
+
+1. Initialize a **Git** repository
+2. Show **hidden files**
+3. Show **file name extensions**
+4. Track tasks with **Better Todo Tree**
+5. Preview pages with **Live Server**
+
+---
+
+# Initialize Git
+
+1. Open the project folder in VS Code.
+2. Open **Source Control** with `Ctrl + Shift + G`.
+3. Click **Initialize Repository**.
+4. Or use the terminal instead:
+
+```bash
+git init
+```
+
+---
+
+# Show Hidden Files
+
+To reveal files such as `.gitignore` or `.env`:
+
+1. Open File Explorer with `Win + E`.
+2. Click the **View** tab.
+3. Choose **Show** → **Hidden items**.
+4. Hidden files now appear in the folder.
+
+---
+
+# Show File Name Extensions
+
+To tell `README.md` apart from `README.md.txt`:
+
+1. Open File Explorer with `Win + E`.
+2. Click **View** → **Show**.
+3. Turn on **File name extensions**.
+4. Check the real file name, for example `README.md`.
+
+---
+
+<!-- _class: compact -->
+
+# Track Tasks with Better Todo Tree
+
+**What it does:** scans your code for `TODO` and `FIXME` comments, groups them in a tree view, and jumps straight to the matching line.
+
+1. Open **Extensions** with `Ctrl + Shift + X`.
+2. Search for **Better Todo Tree** (publisher: FanaticPythoner) and install it.
+3. Open your project folder in VS Code.
+4. Add comments to your code:
+
+```js
+// TODO: add input validation
+// FIXME: fix this bug
+```
+
+5. Click the **Better Todo Tree** icon in the sidebar.
+6. Click any entry to open the file at that line.
+
+---
+
+# Preview Pages with Live Server
+
+1. Open **Extensions** with `Ctrl + Shift + X`.
+2. Search for **Live Server** (publisher: Ritwick Dey) and install it.
+3. Open the project containing `index.html`.
+4. Click **Go Live** in the VS Code status bar.
+5. The page opens in your browser and refreshes whenever you save a change.
+
+> Live Server only serves static HTML pages. It does not run PHP code.
