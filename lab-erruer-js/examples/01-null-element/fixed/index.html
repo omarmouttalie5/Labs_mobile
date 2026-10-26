@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Error 1 - fixed</title>
+  <!-- FIX: defer runs the script after the HTML is parsed -->
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <h1>Comment form</h1>
+  <form id="comment-form">
+    <input id="comment" placeholder="Your comment" required>
+    <button type="submit">Send</button>
+  </form>
+  <p id="message"></p>
+</body>
+</html>
