@@ -38,7 +38,8 @@ style: |
 **Student Name:** Omar Mouttalie
 **Supervisor:** ES-SARRAJ Fouad
 **Institution:** OFPPT / Solicode  
-
+![w:120px](ofppt-logo.png)
+![w:140px](solicode.png)
 <!-- 
 Presenter Note: Welcome everyone! Today I am presenting my technical project: an online Fashion & Apparel Store built as a Single Page Application.
 -->
