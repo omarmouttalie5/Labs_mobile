@@ -38,9 +38,13 @@ style: |
   }
   blockquote {
     background: #fffdf5;
+    color: #0f0f0b;
     border-left: 6px solid var(--primary);
     padding: 10px 20px;
     margin: 10px 0;
+  }
+  blockquote h3 {
+    color: #0f0f0b;
   }
   table {
     font-size: 0.65em;
@@ -56,6 +60,19 @@ style: |
   }
   th {
     background-color: #f1f5f9;
+  }
+  td {
+    background-color: #fffdf5;
+  }
+  /* Compact tables: used for slides with many rows */
+  section.compact table {
+    margin-top: 0;
+  }
+  section.compact th,
+  section.compact td {
+    padding: 9px 14px;
+    font-size: 1.45em;
+    line-height: 1.25;
   }
 ---
 
@@ -102,6 +119,23 @@ style: |
 | **Backend Core** | **PHP (Native)** | Procedural & object-oriented native codebases & PDO |
 | **Mobile / Client** | **Kotlin** | Native mobile application development & client integration |
 | **Data Storage** | **MySQL** | Relational database storage & entity mappings |
+
+---
+
+<!-- _class: compact -->
+
+## Development Tools
+
+| Category | Recommended Tools | How It Helps the Project |
+| :--- | :--- | :--- |
+| **Code Editor** | VS Code, PhpStorm | Write PHP, Blade, Tailwind & Alpine code |
+| **Local Server** | Laragon, XAMPP | Run PHP, Apache & MySQL locally |
+| **Packages** | Composer, npm | Install Laravel, Tailwind, Preline, Alpine |
+| **Database** | MySQL Workbench, phpMyAdmin | Design schema, inspect data (Lab 1) |
+| **API Testing** | Postman, Insomnia | Test REST endpoints (Labs 2 & 5) |
+| **Debug & Test** | Debugbar, Tinker, PHPUnit | Trace queries, verify controllers |
+| **Version Control** | Git, GitHub | Save progress after each Lab |
+| **Mobile** | Android Studio | Build and test the Kotlin client |
 
 ---
 
