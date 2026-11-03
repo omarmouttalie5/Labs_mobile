@@ -7,8 +7,8 @@ style: |
   :root {
     --primary: #ffaa00;
     --secondary: #ffea00;
-    --bg-color: #FEFFF5;
-    --text-color: #1e293b;
+    --bg-color: #0f0f0e;
+    --text-color: #f8fad9;
     --accent-dark: #cc8800;
   }
   section {
@@ -52,6 +52,7 @@ style: |
     padding: 6px 12px;
     line-height: 1.25;
     font-size: 1.5em;
+    color: #0f0f0b;
   }
   th {
     background-color: #f1f5f9;
