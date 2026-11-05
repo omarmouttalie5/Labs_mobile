@@ -48,6 +48,8 @@ Presenter Note: Welcome everyone! Today I am presenting my technical project: an
 
 ## 1. Introduction
 
+
+
 ### Project Overview
 The **Fashion & Apparel Store** is a modern Single Page Application (SPA) designed to deliver a smooth and responsive e-commerce experience for clothing shoppers.
 
