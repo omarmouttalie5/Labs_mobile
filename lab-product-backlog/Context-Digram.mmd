@@ -1,0 +1,12 @@
+usecase-beta
+direction LR
+
+actor Admin("Administrator")
+actor Auteur("Graduate")
+actor Visiteur("Visitor")
+
+system ["Blog"]
+
+Admin -- Manages users and moderates articles -- system
+Auteur -- Writes, edits, and publishes their articles -- system
+Visiteur -- Views and searches published articles -- system
